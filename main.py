@@ -40,5 +40,4 @@ def main():
             print("Opción inválida, intenta de nuevo.")
 
 
-# Ejecutar programa
 main()
