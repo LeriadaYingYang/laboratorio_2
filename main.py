@@ -40,5 +40,4 @@ def main():
         else:
             print("Opción inválida, intenta de nuevo.")
 
-
 main()
