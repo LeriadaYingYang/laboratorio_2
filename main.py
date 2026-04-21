@@ -1,3 +1,4 @@
+
 def opcion_1():
     print("Elegiste la opción 1")
 
@@ -34,7 +35,7 @@ def main():
         elif opcion == "4":
             opcion_4()
         elif opcion == "0":
-            print("Saliendo del sistema...")
+            print("Saliendo del sistema")
             break
         else:
             print("Opción inválida, intenta de nuevo.")
