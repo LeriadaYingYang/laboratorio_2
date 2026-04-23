@@ -28,7 +28,3 @@ def ingresar_notas():
             print("La nota debe estar entre 0 y 20.")
     return notas
 
-if __name__ == "__main__":
-    print("=== Ingreso de notas ===")
-    lista_notas = ingresar_notas()
-    print("Notas ingresadas:", lista_notas)

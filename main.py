@@ -1,7 +1,7 @@
-
+from notas import ingresar_notas
 def opcion_1():
-    print("Elegiste la opción 1")
-
+    print("=== Ingreso de notas ===")
+    lista_notas = ingresar_notas()
 def opcion_2():
     print("Elegiste la opción 2")
 
