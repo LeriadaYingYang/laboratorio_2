@@ -1,6 +1,8 @@
 from alumno import ingresar_estudiante, mostrar_estudiantes
 from notas import ingresar_notas
 from validacion import validar_promedio
+from Promedios import calcular_promedio, obtener_estado
+from reporte import generar_reporte
 lista_notas_global = []
 lista_estudiantes_global = []
 
@@ -28,22 +30,36 @@ def opcion_3():
     if not lista_notas_global:
         print("Primero debes ingresar notas.")
         return
-    promedio = sum(lista_notas_global) / len(lista_notas_global)
+    promedio = calcular_promedio(lista_notas_global)
     letra, estado = validar_promedio(promedio)
-    print(f"Promedio: {promedio:.2f}")
     print(f"Resultado: {letra} {estado}")
     input()
 
 def opcion_4():
-    print("Elegiste la opción 4")
+    global lista_notas_global
+    print("Promedio")
+    if not lista_notas_global:
+        print("Primero debes ingresar notas.")
+        return
+    promedio = calcular_promedio(lista_notas_global)
+    estado = obtener_estado(promedio)
+    print(f"Promedio: {promedio:.2f}")
+    print(f"Estado: {estado}")
+    input()
+
+def opcion_5():
+    print(" Reporte ")
+    generar_reporte(lista_estudiantes_global, lista_notas_global)
+    input()
 
 
 def mostrar_menu():
-    print("\n===== MENÚ PRINCIPAL =====")
+    print("\n MENÚ PRINCIPAL")
     print("1. Opción 1")
     print("2. Opción 2")
     print("3. Opción 3")
     print("4. Opción 4")
+    print("5. Opción 5")
     print("0. Salir")
 
 
@@ -60,6 +76,8 @@ def main():
             opcion_3()
         elif opcion == "4":
             opcion_4()
+        elif opcion == "5":
+            opcion_5()
         elif opcion == "0":
             print("Saliendo del sistema")
             break
