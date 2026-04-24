@@ -1,15 +1,28 @@
 from notas import ingresar_notas
+from validacion import validar_promedio
+lista_notas_global = []
 def opcion_1():
-    print("=== Ingreso de notas ===")
-    lista_notas = ingresar_notas()
-    print("Ingreso de notas de la lista de notas:")
-    input(lista_notas)
+    print("=== Ingreso de alumnos===")
 
 def opcion_2():
-    print("Elegiste la opción 2")
+    global lista_notas_global
+    print("=== Ingreso de notas ===")
+    lista_notas_global = ingresar_notas()
+    print("Notas registradas:", lista_notas_global)
+    input()
 
 def opcion_3():
-    print("Elegiste la opción 3")
+    global lista_notas_global
+    print("=== Validación ===")
+
+    if not lista_notas_global:
+        print("Primero debes ingresar notas.")
+        return
+    promedio = sum(lista_notas_global) / len(lista_notas_global)
+    letra, estado = validar_promedio(promedio)
+    print(f"Promedio: {promedio:.2f}")
+    print(f"Resultado: {letra} {estado}")
+    input()
 
 def opcion_4():
     print("Elegiste la opción 4")

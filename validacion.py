@@ -31,8 +31,3 @@ def validar_promedio(promedio):
         return "C",": Desaprobado"
     else:
         return None, "Promedio inválido"
-
-if __name__=="__main__":
-    print("=== Validación ===")
-    validacion_promedio=validar_promedio()
-    print("Validación de nota:", validacion_promedio)
