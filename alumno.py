@@ -26,9 +26,12 @@ def ingresar_estudiante():
 
 def mostrar_estudiantes(lista_estudiantes):
 
-    print("======LISTA DE ESTUDIANTES:======")
+    print("\n======LISTA DE ESTUDIANTES:======")
+
     for est in lista_estudiantes:
-        print(f"Codigo :  {est['Codigo']}")
-        print(f"Nombre :  {est['Nombre']}")
+        print("=================================")
+        print(f"Codigo   :  {est['Codigo']}")
+        print(f"Nombre   :  {est['Nombre']}")
         print(f"Apellido :  {est['Apellido']}")
-        print(f"Carrera :  {est['Carrera']}")
+        print(f"Carrera  :  {est['Carrera']}")
+        
