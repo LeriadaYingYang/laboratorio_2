@@ -1,9 +1,19 @@
+from alumno import ingresar_estudiante, mostrar_estudiantes
 from notas import ingresar_notas
 from validacion import validar_promedio
 lista_notas_global = []
-def opcion_1():
-    print("=== Ingreso de alumnos===")
+lista_estudiantes_global = []
 
+def opcion_1():
+    global lista_estudiantes_global
+
+    print("=== Ingreso de alumnos ===")
+    estudiante = ingresar_estudiante()
+    lista_estudiantes_global.append(estudiante)
+
+    print("Alumno registrado correctamente.")
+    mostrar_estudiantes(lista_estudiantes_global)
+    input()
 def opcion_2():
     global lista_notas_global
     print("=== Ingreso de notas ===")
